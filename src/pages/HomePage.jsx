@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Header } from '../components/Header.jsx';
 import CheckmarkIcon from '../assets/images/icons/checkmark.png';
 import { products } from '../../starting-code/data/products.js';
@@ -10,14 +11,19 @@ export function HomePage() {
         console.log(data);
       });
     })
-*/
+
 fetch('http://localhost:3000/api/products')
     .then((response) => {
       return response.json();
     }).then((data) => {
       console.log(data);
     });
+*/
 
+axios.get('http://localhost:3000/api/products')
+    .then((response) => {
+      response.data;
+    });
 
   return (
     <>
