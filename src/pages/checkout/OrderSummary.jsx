@@ -15,7 +15,7 @@ export function OrderSummary({ cart, deliveryOptions, loadCart }) {
             <div className="cart-item-details-grid">
               <DeliveryDate cartItem={cartItem} deliveryOptions={deliveryOptions} />
               
-              <CartItemDetails cartItem={cartItem} />
+              <CartItemDetails cartItem={cartItem} loadCart={loadCart}/>
 
               <DeliveryOptions cartItem={cartItem} deliveryOptions={deliveryOptions} loadCart={loadCart}/>
 
